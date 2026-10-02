@@ -1,0 +1,9 @@
+{
+  "nombre_tienda": "Mi Comercio",
+  "whatsapp": "593999999999",
+  "moneda": "$",
+  "productos": [
+    {"nombre":"Camiseta básica","precio":12.5,"imagen":"","tallas":["S","M","L","XL"],"caracteristicas":["100% algodón","Cuello redondo","Varios colores"],"disponible":true},
+    {"nombre":"Gorra deportiva","precio":8,"imagen":"","tallas":[],"caracteristicas":["Ajustable","Tela transpirable"],"disponible":true}
+  ]
+}

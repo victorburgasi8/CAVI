@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+locale: es
+media_folder: images/productos
+public_folder: /images/productos
+collections:
+  - name: tienda
+    label: Mi catálogo
+    files:
+      - name: catalogo
+        label: Productos y ajustes
+        file: data/catalogo.json
+        format: json
+        fields:
+          - { label: Nombre de la tienda, name: nombre_tienda, widget: string }
+          - { label: "WhatsApp (con código de país, sin + ni espacios)", name: whatsapp, widget: string }
+          - { label: Símbolo de moneda, name: moneda, widget: string, default: "$" }
+          - label: Productos
+            name: productos
+            widget: list
+            summary: "{{fields.nombre}} - {{fields.precio}}"
+            fields:
+              - { label: Nombre, name: nombre, widget: string }
+              - { label: Precio, name: precio, widget: number, value_type: float, min: 0 }
+              - { label: Foto, name: imagen, widget: image, required: false }
+              - { label: Tallas (déjalo vacío si no aplica), name: tallas, widget: list, required: false, default: [] }
+              - { label: Características, name: caracteristicas, widget: list, required: false, default: [] }
+              - { label: Disponible, name: disponible, widget: boolean, default: true }
